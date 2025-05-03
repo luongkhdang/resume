@@ -1,0 +1,219 @@
+%----------------------------------------------------------------------------------------
+%	HEADER COMMENT
+%----------------------------------------------------------------------------------------
+% Purpose: LaTeX template for Luong Dang's resume.
+%          Generates a PDF resume using information parsed from resume.md.
+% Key Details: Uses standard article class, common LaTeX packages for formatting.
+%              Defines custom commands for resume sections (\resumeSubheading, etc.).
+% Related Files: resume.md (source of content)
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{latexsym}
+\usepackage[empty]{fullpage} % Use full page
+\usepackage{titlesec} % Allows customization of titles
+\usepackage{marvosym} % Required for symbols like phone/email
+\usepackage[usenames,dvipsnames]{color} % Allows using color names
+\usepackage{verbatim} % Allows environments for comments
+\usepackage{enumitem} % Customize lists
+\usepackage[hidelinks]{hyperref} % For clickable links (email, linkedin, github)
+\usepackage{fancyhdr} % To manage headers/footers (empty here)
+\usepackage[english]{babel}
+\usepackage{tabularx} % For tables with adjustable column widths
+\input{glyphtounicode} % Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%----------------------------------------------------------------------------------------
+%	FONT OPTIONS (Comment out unused ones)
+%----------------------------------------------------------------------------------------
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+\usepackage[default]{sourcesanspro} % Example: Using Source Sans Pro
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+%----------------------------------------------------------------------------------------
+%	PAGE STYLE & MARGINS
+%----------------------------------------------------------------------------------------
+\pagestyle{fancy} % Use fancyhdr page style
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot{} % Clear footer
+\renewcommand{\headrulewidth}{0pt} % No header rule
+\renewcommand{\footrulewidth}{0pt} % No footer rule
+
+% Adjust margins (tightened further)
+\addtolength{\oddsidemargin}{-0.75in} % Was -0.6in
+\addtolength{\evensidemargin}{-0.75in} % Was -0.6in
+\addtolength{\textwidth}{1.5in} % Was 1.2in
+\addtolength{\topmargin}{-.75in} % Was -0.6in
+\addtolength{\textheight}{1.5in} % Was 1.2in
+
+\urlstyle{same} % Keep URL style consistent
+\raggedbottom % Prevent extra vertical space stretching
+\raggedright % Right align text (standard resume format)
+\setlength{\tabcolsep}{0in} % Remove padding between table columns
+
+%----------------------------------------------------------------------------------------
+%	SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large % Format: Small caps, ragged right, large font (vspace reduced from -4pt)
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}] % Add a horizontal rule under section title (vspace reduced from -5pt)
+
+%----------------------------------------------------------------------------------------
+%	CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+% Command for resume item (bullet point)
+\newcommand{\resumeItem}[1]{
+  \item\small{ {#1 \vspace{-4pt}} } % Small font, slight space below (vspace reduced from -2pt)
+}
+
+% Command for subheading (e.g., Job Title, University)
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item % vspace reduced from -2pt
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r} % Table fills width
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-8pt} % Space after subheading (vspace reduced from -7pt)
+}
+
+% Command for project heading
+\newcommand{\resumeProjectHeading}[2]{
+  \vspace{-3pt}\item % vspace reduced from -2pt
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \small #2 \\
+  \end{tabular*}\vspace{-8pt} % vspace reduced from -7pt
+}
+
+% Command for item lists (like bullet points under a job)
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}} % vspace reduced from -5pt
+
+% Command for sub-heading lists (groups sections like Education, Experience)
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Corrected: Added closing brace
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} % Corrected: Moved to its own line
+
+% Customize bullet points for nested lists
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADING
+%----------------------------------------------------------------------------------------
+\begin{center}
+    \textbf{\Huge \scshape Luong Dang} \\ \vspace{1pt} % Name
+    \small % Contact info
+    (510)-541-8379 $|$
+    \href{mailto:luongdang0701@gmail.com}{\underline{luongdang0701@gmail.com}} $|$
+    \href{https://linkedin.com/in/luong-dang}{\underline{linkedin.com/in/luong-dang}} $|$
+    \href{https://github.com/luongkhdang}{\underline{github.com/luongkhdang}}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {San Francisco State University}{San Francisco, CA}
+      {Bachelor of Science in Computer Science}{GPA: 3.64} % Degree and GPA
+    \resumeSubheading % Relevant coursework subheading
+      {Relevant Coursework}{} % No date/location needed
+      {Object-Oriented Programming, Algorithms, Software Design and Implementation, Database Systems, Full-Stack Web Development.}{} % List courses
+  \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{ % Group skills into categories
+        \textbf{Languages}{: Python, TypeScript, JavaScript, SQL} \\
+        \textbf{Frontend Frameworks/Libraries}{: React, Next.js, React Query, Framer Motion} \\
+        \textbf{Backend Frameworks}{: Django, FastAPI, Node.js} \\
+        \textbf{Databases}{: PostgreSQL, MySQL, Redis} \\
+        \textbf{AI/ML Libraries \& Frameworks}{: PyTorch, Pandas, NumPy, Scikit-learn, NLTK, Transformers, Sentence-Transformers, Haystack-AI} \\
+        \textbf{AI/ML Models \& Concepts}{: LLMs (Gemini, LLaMA, Flux.1 AI), Retrieval Augmented Generation (RAG), Embeddings, NLP, Clustering (HDBScan)} \\
+        \textbf{Cloud \& DevOps}{: AWS, Supabase (PaaS), Docker, Git, REST APIs, Cloudinary (CDN), CI/CD Automation}
+    }}
+ \end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+  \resumeSubHeadingListStart
+    % Job 1
+    \resumeSubheading
+      {Operations Manager / Full-stack Developer}{Oct 2024 – Present}
+      {Kim Tin Jewelry}{Oakland, CA}
+      \resumeItemListStart
+        \resumeItem{Led the end-to-end technical transformation of a family-owned retail business, significantly improving operational efficiency and enabling strategic growth.}
+        \resumeItem{Built and deployed full-stack automation tools (Python, TypeScript, PostgreSQL) for critical operations (accounting, inventory, CRM), cutting manual workload by 70\%.} % Note: Escaped %
+        \resumeItem{Developed custom applications to optimize inventory management and vendor interactions, directly impacting supply chain efficiency.}
+        \resumeItem{Launched data-driven digital marketing campaigns using social media and AI (Flux.1) to demonstrably grow the customer base.}
+        \resumeItem{Designed and implemented a personalized customer loyalty system to enhance retention.}
+        \resumeItem{Applied software engineering principles to modernize backend systems and contribute technical insights crucial for a successful business exit strategy.}
+      \resumeItemListEnd
+
+    % Job 2
+    \resumeSubheading
+      {Insurance Agent (Sales)}{Apr 2022 – Sep 2024}
+      {AAA – The Auto Club of Southern California}{Costa Mesa, CA}
+      \resumeItemListStart
+        \resumeItem{ Top 3\% (peaked at \#1 of 255 in Jan-Feb 2024) insurance agent (Personal Lines \& Life) leveraged Computer Science expertise to manage the full sales cycle (lead gen, sales, service, retention) and self-underwrite tailored policies under supervision.} % Note: Escaped % and #
+        \resumeItem{Transitioning directly from Bachelor's program, played a key role in the Salesforce CRM integration by applying systems knowledge to provide actionable user feedback, improving workflow design and team adoption.}
+        \resumeItem{Demonstrated strong problem-solving and initiative by identifying and resolving process inefficiencies, contributing directly to team performance (Team of the Year Regional).}
+        \resumeItem{Utilized data analysis and systems thinking (rooted in CS background) to systematically optimize sales processes, analyzed performance data to pinpoint key growth drivers, leading to strategies resulting in Top 3\% national producer ranking (Diamond Club) and multiple performance awards.} % Note: Escaped %
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    % Project 1
+    \resumeProjectHeading
+      {\textbf{NewsReader-Ultimate} $|$ \emph{Python, Google-GenAI, Haystack-RAG, PostgreSQL}}{Apr 2025 – Present}
+      \resumeItemListStart
+        \resumeItem{Developed a scalable Python pipeline automating news analysis from ingestion to reporting; features include LLM-based preprocessing (summarization, embedding, clustering) and integration with a custom RAG system.}
+        \resumeItem{Designed and executed an ETL process: extracted articles from Scraper-Ultimate API, transformed them using local llms and Gemini, and loaded structured results into a PostgreSQL database.}
+        \resumeItem{Designed a RAG architecture to retrieve historical articles, entities, and events, enhancing the context and insights of daily reports leveraging Haystack framework.}
+        \resumeItem{Applied prompt engineering techniques with Google's Gemini 2.5 Pro and its large context window (1 million tokens or 10 small novels) within the RAG pipeline to generate comprehensive daily reports, encompassing recaps, interpretations, patterns, and opinions.}
+      \resumeItemListEnd
+
+    % Project 2
+    \resumeProjectHeading
+      {\textbf{Scraper-Ultimate} $|$ \emph{Python, FastAPI, PostgreSQL, Docker}}{Mar 2025 – Apr 2025}
+      \resumeItemListStart
+        \resumeItem{Developed a robust web scraping pipeline in Python, utilizing libraries such as Playwright and Scrapling to extract structured data from diverse news sources.}
+        \resumeItem{Implemented advanced anti-detection techniques, including browser fingerprint randomization, HTTP request customization, and adaptive retry mechanisms, to overcome anti-bot protections.}
+        \resumeItem{Designed the solution to simulate human interaction patterns, effectively bypassing complex security measures such as CAPTCHAs and dynamic overlays, ensuring high-quality data extraction.}
+      \resumeItemListEnd
+
+    % Project 3
+    \resumeProjectHeading
+      {\textbf{House of Iris} $|$ \emph{Next.js, React, Typescript, TailwindCSS, Supabase Postgres}}{Dec 2024 – Present}
+      \resumeItemListStart
+        \resumeItem{Built and deployed a full-stack application using Next.js/React/TypeScript, demonstrating proficiency in component architecture, state management, and API integration.}
+        \resumeItem{Implemented optimized image delivery by integrating the Cloudinary API for transformations and efficient loading.}
+        \resumeItem{Created a digital love letter system using Supabase Postgres for CRUD operations, enabling persistent storage and retrieval of user-generated content.}
+        \resumeItem{Implemented a functional calendar component with scheduling capabilities, managing React state effectively and utilizing EmailJS to send automated confirmation and reminder emails.}
+        \resumeItem{Designed a reward mechanic with Framer Motion, incorporating a Gacha system to gamify the user experience and provide incentives.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%----------------------------------------------------------------------------------------
+%	END DOCUMENT
+%----------------------------------------------------------------------------------------
+\end{document} 
