@@ -1,17 +1,17 @@
 %----------------------------------------------------------------------------------------
-%	HEADER COMMENT
+% HEADER COMMENT
 %----------------------------------------------------------------------------------------
 % Purpose: LaTeX template for Luong Dang's resume.
-%          Generates a PDF resume using information parsed from resume.md.
+%          Generates a PDF resume. Content is defined within this .tex file.
 % Key Details: Uses standard article class, common LaTeX packages for formatting.
 %              Defines custom commands for resume sections (\resumeSubheading, etc.).
-% Related Files: resume.md (source of content)
+% Related Files: None (Content is hardcoded in this .tex file)
 %----------------------------------------------------------------------------------------
 
 \documentclass[letterpaper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+% PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{latexsym}
 \usepackage[empty]{fullpage} % Use full page
@@ -29,7 +29,7 @@
 \pdfgentounicode=1
 
 %----------------------------------------------------------------------------------------
-%	FONT OPTIONS (Comment out unused ones)
+% FONT OPTIONS (Comment out unused ones)
 %----------------------------------------------------------------------------------------
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
@@ -39,7 +39,7 @@
 % \usepackage{charter}
 
 %----------------------------------------------------------------------------------------
-%	PAGE STYLE & MARGINS
+% PAGE STYLE & MARGINS
 %----------------------------------------------------------------------------------------
 \pagestyle{fancy} % Use fancyhdr page style
 \fancyhf{} % Clear all header and footer fields
@@ -60,55 +60,55 @@
 \setlength{\tabcolsep}{0in} % Remove padding between table columns
 
 %----------------------------------------------------------------------------------------
-%	SECTION FORMATTING
+% SECTION FORMATTING
 %----------------------------------------------------------------------------------------
 \titleformat{\section}{
-  \vspace{-6pt}\scshape\raggedright\large % Format: Small caps, ragged right, large font (vspace reduced from -4pt)
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}] % Add a horizontal rule under section title (vspace reduced from -5pt)
+  \vspace{-8pt}\scshape\raggedright\large % Format: Small caps, ragged right, large font (vspace adjusted from -6pt)
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}] % Add a horizontal rule under section title (vspace adjusted from -7pt)
 
 %----------------------------------------------------------------------------------------
-%	CUSTOM COMMANDS
+% CUSTOM COMMANDS -- ADJUSTED SPACING
 %----------------------------------------------------------------------------------------
 % Command for resume item (bullet point)
 \newcommand{\resumeItem}[1]{
-  \item\small{ {#1 \vspace{-4pt}} } % Small font, slight space below (vspace reduced from -2pt)
+  \item\small{ {#1 \vspace{-2pt}} } % Small font, space below (vspace adjusted from -4pt)
 }
 
 % Command for subheading (e.g., Job Title, University)
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-3pt}\item % vspace reduced from -2pt
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r} % Table fills width
+  \vspace{-2pt}\item % vspace adjusted from -3pt
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-8pt} % Space after subheading (vspace reduced from -7pt)
+  \end{tabular*}\vspace{-6pt} % Space after subheading (vspace adjusted from -8pt)
 }
 
 % Command for project heading
 \newcommand{\resumeProjectHeading}[2]{
-  \vspace{-3pt}\item % vspace reduced from -2pt
+  \vspace{-3pt}\item % vspace adjusted from -3pt
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \small#1 & \small #2 \\
-  \end{tabular*}\vspace{-8pt} % vspace reduced from -7pt
+  \end{tabular*}\vspace{-5pt} % vspace adjusted from -8pt
 }
 
 % Command for item lists (like bullet points under a job)
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}} % vspace reduced from -5pt
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}} % vspace adjusted from -7pt (Major change for overlap)
 
 % Command for sub-heading lists (groups sections like Education, Experience)
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Corrected: Added closing brace
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}} % Corrected: Moved to its own line
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 % Customize bullet points for nested lists
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 %----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
+% BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
 %----------------------------------------------------------------------------------------
-%	HEADING
+% HEADING
 %----------------------------------------------------------------------------------------
 \begin{center}
     \textbf{\Huge \scshape Luong Dang} \\ \vspace{1pt} % Name
@@ -120,33 +120,32 @@
 \end{center}
 
 %----------------------------------------------------------------------------------------
-%	ABOUT
+% ABOUT
 %----------------------------------------------------------------------------------------
-\section{About}
-\vspace{2pt} % Add a small space after the section title
+\section{About} 
 \small{\justifying % Justify the text in the About section
 Full-stack engineer with a builder's drive, proven in fast-paced commercial environments (AAA of SoCal). Experience bootstrapping the technical operations for a growing family business (Kim Tin Jewelry) alongside success in high-responsibility roles. Eager to apply strong technical skills, product intuition sharpened by diverse operational and customer-facing experiences, and a high-impact work ethic to build valuable software solutions and contribute significantly to organizational goals.
-} % End \small and \justifying
-\vspace{4pt} % Add some space after the About section
+} % End \small and \justifying 
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
+% EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
     \resumeSubheading
       {San Francisco State University}{San Francisco, CA}
       {Bachelor of Science in Computer Science}{GPA: 3.64} % Degree and GPA
+    \vspace{1pt} % ADDED: Small positive space to prevent coursework overlap
     \resumeSubheading % Relevant coursework subheading
       {Relevant Coursework}{} % No date/location needed
       {Object-Oriented Programming, Algorithms, Software Design and Implementation, Database Systems, Full-Stack Web Development.}{} % List courses
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
-%	TECHNICAL SKILLS
+% TECHNICAL SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.15in, label={}] % Removed leading spaces
     \small{\item{ % Group skills into categories
         \textbf{Languages}{: Python, TypeScript, JavaScript, SQL, HTML, CSS} \\
         \textbf{Frontend Frameworks/Libraries}{: React, Next.js, React Query, Framer Motion} \\
@@ -155,13 +154,13 @@ Full-stack engineer with a builder's drive, proven in fast-paced commercial envi
         \textbf{Cloud \& DevOps}{: REST APIs, JSON, HTTP, AWS, Supabase (PaaS), Docker, Git, Cloudinary (CDN), CI/CD Automation} \\
         \textbf{Concepts}{: OOP, End-to-End Product Development, Retrieval Augmented Generation (RAG), Embeddings, NLP, LLMs (Gemini, LLaMA, Flux.1 AI), Clustering (HDBScan)}
     }}
- \end{itemize}
+\end{itemize}
 
 %----------------------------------------------------------------------------------------
-%	EXPERIENCE
+% EXPERIENCE
 %----------------------------------------------------------------------------------------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart % Removed leading spaces
     % Job 1
     \resumeSubheading
       {Full-stack Developer / Operations Manager}{Oct 2024 – Present}
@@ -183,13 +182,13 @@ Full-stack engineer with a builder's drive, proven in fast-paced commercial envi
         \resumeItem{Demonstrated strong problem-solving and initiative by identifying and resolving process inefficiencies, contributing directly to team performance (Team of the Year Regional).}
         \resumeItem{Utilized data analysis and systems thinking (rooted in CS background) to systematically optimize sales processes, analyzed performance data to pinpoint key growth drivers, leading to strategies resulting in Top 3\% national producer ranking (Diamond Club) and multiple performance awards.}
       \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
-%	PROJECTS
+% PROJECTS
 %----------------------------------------------------------------------------------------
 \section{Projects}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart % Removed leading spaces
     % Project 1
     \resumeProjectHeading
       {\textbf{NewsReader-Ultimate (Part 2 of Scraper-Ultimate)} $|$ \emph{Python, Google-GenAI, Haystack-RAG, PostgreSQL}}{Apr 2025 – Present}
@@ -216,9 +215,9 @@ Full-stack engineer with a builder's drive, proven in fast-paced commercial envi
         \resumeItem{Implemented a functional calendar component with scheduling capabilities, managing React state effectively and utilizing EmailJS to send automated confirmation and reminder emails.}
         \resumeItem{Designed a reward mechanic with Framer Motion, incorporating a Gacha system to gamify the user experience and provide incentives.}
       \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
-%	END DOCUMENT
+% END DOCUMENT
 %----------------------------------------------------------------------------------------
-\end{document} 
+\end{document}
