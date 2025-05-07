@@ -106,10 +106,25 @@ header .contact-info a:hover {
 main {
   flex: 1;
   width: 100%;
-  max-width: 900px; /* Max width for readability */
-  margin: 2rem auto; /* Center the content */
-  padding: 0 1.5rem; /* Padding on sides */
-  box-sizing: border-box; /* Include padding in width calculation */
+  max-width: 1200px; /* Increased for two-column layout */
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Styles for the two-column layout */
+.resume-container {
+  display: flex;
+  flex-direction: row; /* Side-by-side for desktop */
+  gap: 2rem; /* Space between columns */
+}
+
+.left-column {
+  flex: 0 0 35%; /* Left column takes 35% */
+}
+
+.right-column {
+  flex: 1; /* Right column takes remaining space */
 }
 
 /* --- Sections --- */
@@ -195,6 +210,22 @@ footer {
 }
 
 /* --- Responsive Design --- */
+@media (max-width: 992px) {
+  /* For tablets and smaller desktops */
+  main {
+    max-width: 900px; /* Optional: revert to a smaller max-width for single column */
+  }
+  .resume-container {
+    flex-direction: column; /* Stack columns vertically */
+    gap: 0; /* Remove gap when stacked */
+  }
+
+  .left-column,
+  .right-column {
+    flex: 1 1 100%; /* Columns take full width when stacked */
+  }
+}
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
@@ -217,12 +248,20 @@ footer {
     align-items: flex-start; /* Align to the start */
   }
   .entry-header span, /* Date/Location */
-    .entry-subheader span {
+  .entry-subheader span {
     /* GPA/Location */
     margin-top: 0.1em; /* Add small space when stacked */
   }
   .project-tech {
     text-align: left; /* Align left when stacked */
+  }
+  /* Ensure columns are stacked if not already covered by a higher breakpoint */
+  .resume-container {
+    flex-direction: column;
+  }
+  .left-column,
+  .right-column {
+    flex: 1 1 100%;
   }
 }
 
