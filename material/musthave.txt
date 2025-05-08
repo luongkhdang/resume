@@ -1,0 +1,48 @@
+Technical Skills and Concepts
+Language:
+HTML    
+CSS (including preprocessors like Sass or Less)    
+JavaScript (including ES6+/ECMAScript 2015+)    
+TypeScript    
+Python
+
+Framework/Library:
+React    
+Next.js    
+Vue.js    
+Angular.js    
+State management libraries (e.g., Redux with React)    
+JavaScript testing frameworks (e.g., MochaJS, Jest, Cypress)    
+
+Concept:
+REST APIs (designing, building, or consuming)    
+WebSockets    
+State Management    
+Build Tools (e.g., Webpack, Rollup, Vite)    
+Version Control (Git)    
+Testing (unit, integration, end-to-end)    
+Test-Driven Development (TDD)    
+Performance Optimization    
+Browser Rendering    
+Responsive Design    
+Cross-Browser Compatibility    
+Accessibility (a11y)    
+Software Development Methodologies (Agile)    
+Code Quality & Best Practices (clean, maintainable, reusable, well-documented code, code reviews) 
+   
+Required working patterns (trait):
+Write efficient and reusable code    
+Understanding browser rendering    
+Ensuring applications work well across different devices and browsers (Responsive design & cross-browser compatibility)    
+Understanding and implementing web accessibility standards    
+Experience working in Agile environments    
+Problem-Solving    
+Collaboration & Teamwork (with designers, product managers, other engineers)    
+Communication Skills (written and verbal)    
+Ownership & Initiative (taking responsibility, drive to deliver)    
+Adaptability & Learning Mindset (willingness to learn new technologies)    
+User-Focus/Product Mindset (thinking about end-user experience, contributing to product decisions)    
+Writing clean, maintainable, reusable, and well-documented code    
+Participating in code reviews    
+
+
