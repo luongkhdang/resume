@@ -1,0 +1,21 @@
+help me answer this question "Why are you interested in working at this company?" Now, I want the answer to be one paragraph, and it needs to give visibility on how I would apply my skills and knowledge to fulfill the role and go above and beyong. simply state projects as "personal projects" and jobs as "previous positions"
+
+context:
+
+
+help me write a cover letter to the recruiter, need not to be long nor over-polite, should be straightfoward and personal, explaining that I'm eager to take any opportunity to work on challenging topic as software engineer.simply state projects as "personal projects" and jobs as "previous positions". Emphasize that I want to prove my ability and willing to take any job even if it is an entry level and intern level. as long as it is software engineering/developer. tell the recruiter to notify me for any available opportunities. after that, write a 200 char note to send to linkedin.
+
+here is the job which i found the recruiter contact info:
+
+
+My proudest achievement so far was during my time as an Insurance Agent at AAA, where I was able to leverage my CS background to become the #1 performing agent in a the region (California, out of 255 agents, Jan-Feb 2024).
+When I first stared in insurance sales, I was transitioning from my Bachelor program. I was relatively new to sales and in a very competitive environment. My goal wasn't just to sell, but to systematically study about the American life through big data, which AAA uniquely offers. At AAA, they use Salesforce CRM, which took me a very short time to study and master. So, I applied my analytical skills: I tracked my sales data, identified patterns in successful conversions and lead sources, and then used those insights to optimize my sales strategy, focusing my efforts where they'd have the most impact. This data-driven approach led me to peak at #1 in the region and consistently stay in the top 3% producer. It was my proudest moment because it showed me the power of applying analytical thinking to achieve excellence, even in a field outside of traditional tech. It proved that a systematic pursuit of improvement yields tangible results.
+
+
+
+
+
+Tell me about reaching goal
+Tell me about negotiation
+Tell me about the right course of action/ to do the right thing
+Tell me about getting criticise
