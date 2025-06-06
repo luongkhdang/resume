@@ -48,9 +48,9 @@
 \renewcommand{\footrulewidth}{0pt} % No footer rule
 
 % Adjust margins (tightened further)
-\addtolength{\oddsidemargin}{-0.75in} % Was -0.6in
-\addtolength{\evensidemargin}{-0.75in} % Was -0.6in
-\addtolength{\textwidth}{1.5in} % Was 1.2in
+\addtolength{\oddsidemargin}{-0.80in} % Was -0.75in
+\addtolength{\evensidemargin}{-0.80in} % Was -0.75in
+\addtolength{\textwidth}{1.7in} % Was 1.5in
 \addtolength{\topmargin}{-.75in} % Was -0.6in
 \addtolength{\textheight}{1.5in} % Was 1.2in
 
@@ -63,37 +63,37 @@
 % SECTION FORMATTING
 %----------------------------------------------------------------------------------------
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large % Format: Small caps, ragged right, large font (vspace adjusted from -6pt)
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}] % Add a horizontal rule under section title (vspace adjusted from -7pt)
+  \vspace{-10pt}\bfseries\raggedright\normalsize % Format: Small caps, normal size font (vspace adjusted)
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}] % Add a horizontal rule under section title (vspace adjusted)
 
 %----------------------------------------------------------------------------------------
 % CUSTOM COMMANDS -- ADJUSTED SPACING
 %----------------------------------------------------------------------------------------
 % Command for resume item (bullet point)
 \newcommand{\resumeItem}[1]{
-  \item\small{ {#1 \vspace{-2pt}} } % Small font, space below (vspace adjusted from -4pt)
+  \item\small{ {#1 \vspace{-5pt}} } % Tightened space after each bullet point
 }
 
 % Command for subheading (e.g., Job Title, University)
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item % vspace adjusted from -3pt
+  \vspace{2pt}\item % Keep small space above subheading
   \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-6pt} % Space after subheading (vspace adjusted from -8pt)
+  \end{tabular*}\vspace{-8pt} % Tightened space after subheading
 }
 
 % Command for project heading
 \newcommand{\resumeProjectHeading}[2]{
-  \vspace{-3pt}\item % vspace adjusted from -3pt
+  \vspace{-2pt}\item % Consistent space above project heading
   \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
     \small#1 & \small #2 \\
-  \end{tabular*}\vspace{-5pt} % vspace adjusted from -8pt
+  \end{tabular*}\vspace{-8pt} % Tightened space after project heading
 }
 
 % Command for item lists (like bullet points under a job)
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}} % vspace adjusted from -7pt (Major change for overlap)
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}} % Tightened space after a list of bullets
 
 % Command for sub-heading lists (groups sections like Education, Experience)
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
@@ -111,23 +111,70 @@
 % HEADING
 %----------------------------------------------------------------------------------------
 \begin{center}
-    \textbf{\Huge \scshape Luong Dang} \\ \vspace{1pt} % Name
+    \textbf{\huge \scshape Luong Dang} \\ \vspace{1pt} % Name (size reduced from \Huge)
     \small % Contact info
-    (510)-541-8379 $|$
+    (510) 541-8379 $|$
     \small % Contact info
     Oakland, CA (94609) $|$
     \href{mailto:luongdang0701@gmail.com}{\underline{luongdang0701@gmail.com}} $|$
     \href{https://linkedin.com/in/luong-dang}{\underline{linkedin.com/in/luong-dang}} $|$
     \href{https://github.com/luongkhdang}{\underline{github.com/luongkhdang}}
 \end{center}
-
+\vspace{-16pt}
 %----------------------------------------------------------------------------------------
 % ABOUT
 %----------------------------------------------------------------------------------------
 \section{About} 
 \small{\justifying % Justify the text in the About section
-Full-stack engineer with the equivalent of 2 years of software engineering experience, gained through rigorous academic coursework, personal projects, and professional roles in fast-paced commercial environments (AAA of SoCal, Kim Tin Jewelry). Proven ability to bootstrap technical operations for growing businesses, manage full development lifecycles, and deliver impactful software solutions. Eager to apply strong technical skills, product intuition, and a high-impact work ethic to build valuable software and contribute significantly to organizational goals.
+Full-stack Software Engineer with 2+ years of experience building end-to-end systems that combine business logic, data analytics, and user-focused UX. Engineered ERP tools and automation pipelines that cut manual overhead by 40\%, increased LTV by 15\%, and improved telemetry observability. Proficient in production-grade stacks (React, Next.js, TypeScript, TailwindCSS, FastAPI, PostgreSQL, Docker). Skilled in API integration (REST/GraphQL, JWT), real-time data sync, and CI/CD tooling (Github Actions, Supabase). Thrive in Agile teams with strong collaboration, feedback-driven iteration, and full lifecycle ownership.
 } % End \small and \justifying 
+
+%----------------------------------------------------------------------------------------
+% TECHNICAL SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}] % Removed leading spaces
+    \small{\item{ % Group skills into categories
+        \textbf{Languages \& Frameworks}{: Python, TypeScript, JavaScript, SQL, HTML, CSS, React.js, Next.js, Redux, TanStack Query} \\
+        \textbf{Backend \& DevOps}{: Django, FastAPI, Node.js, PostgreSQL, Supabase, RESTful APIs, GraphQL, JWT, Docker, Kubernetes, Github Actions, Webpack, NPM scripts} \\
+        \textbf{Systems \& Architecture}{: CI/CD, Microservices, ETL Pipelines, Component-Based Architecture, Design Systems, RAG, AI Tooling, PaaS\/SaaS integration} \\
+        \textbf{Testing, Monitoring \& Performance}{: Unit Testing, Integration Testing, Linting, Code Coverage, Datadog, Lighthouse, A11Y Standards, Lazy Loading, Bundle Optimization} \\
+        \textbf{Product \& Collaboration}{: ERP Systems, CRM Automation, Agile/Scrum, JIRA, Internal Tooling, Ownership Mindset, Cross-Functional Collaboration, Mentorship}
+    }}
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Experience}
+\resumeSubHeadingListStart % Removed leading spaces
+    % Job 1
+    \resumeSubheading
+      {Full-stack Developer / Operations Manager}{Oct 2024 – Present, Jun 2021 - Jan 2022}
+      {Kim Tin Jewelry}{Oakland, CA}
+      \resumeItemListStart
+        \resumeItem{Consolidated fragmented workflows into unified admin dashboards with real-time ETL, embedded analytics, and exportable reports-enabling strategic insights that directly supported a successful business exit.} 
+        \resumeItem{Architected and deployed modular ERP systems (inventory, billing, CRM, analytics) using React.js, TypeScript, FastAPI, PostgreSQL, Docker-eliminating siloed processes and reducing manual workload by 40\%.} 
+        \resumeItem{Built AI-driven chatbots (ops + client-facing) and automated multichannel outreach pipelines (SMS/email) with NLP intent parsing-boosted per-order spend by 15\% and added 10,000+ qualified leads.} 
+        \resumeItem{Integrated GraphQL and RESTful APIs, implemented stateful front-end caching (Redux, TanStack Query), and optimized performance-minimized load times and improved UX across all business-facing tools.} 
+        \resumeItem{Contributed to design system reuse and implemented WCAG-compliant UI standards-ensuring visual accessibility and consistency across modules.} 
+        \resumeItem{Developed unit and integration tests using Jest, React Testing Library, and Pytest-ensuring coverage across front-end forms, back-end APIs, and ETL pipelines.} 
+        \resumeItem{Deployed robust CI/CD workflows (GitHub Actions, Webpack, NPM scripts) and monitored KPIs with Datadog-ensured stable releases, reduced regressions, and increased deployment confidence.} 
+        \resumeItem{Operated in Agile Scrum, managed JIRA sprint boards, ran QA test plans, and owned the entire software delivery lifecycle-ensuring consistent stakeholder alignment and measurable product velocity.} 
+      \resumeItemListEnd
+
+    % Job 2
+    \resumeSubheading
+      {Insurance Agent (Full-Cycle Sales Ops, CRM Systems Integration) - 2 years, 6 months}{Apr 2022 – Sep 2024}
+      {AAA – The Auto Club of Southern California}{Costa Mesa, CA}
+      \resumeItemListStart
+        \resumeItem{Managed the full sales lifecycle (lead gen, quoting, self-underwriting, servicing), personally generating \$1.2m+ ARR and ranking top 3\% of 255 agents.} 
+        \resumeItem{Acted as Salesforce CRM power user + rollout bridge, validating UAT flows, surfacing edge cases, and shaping feature requests' accelerated adoption across frontline teams.} 
+        \resumeItem{Built VBA macros (Excel, Word, Outlook) to automate lead management, follow-ups, onboarding, and renewal workflows on script-restricted systems-cutting repetitive workload by 20\%+.} 
+        \resumeItem{Led macro adoption for a 21-member team and trained 100+ agents org-wide on CRM usage, dramatically improving pipeline hygiene, retention tracking, and conversion velocity.} 
+        \resumeItem{Contributed directly to Team of the Year (Regional) by improving sales ops throughput, reducing manual errors, and scaling CRM usage across teams.}  
+      \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
 % EDUCATION
@@ -140,50 +187,7 @@ Full-stack engineer with the equivalent of 2 years of software engineering exper
     \vspace{3pt} % ADDED: Small positive space to prevent coursework overlap
     \resumeSubheading % Relevant coursework subheading
       {Relevant Coursework}{} % No date/location needed
-      {Object-Oriented Programming, Algorithms, Software Design and Implementation, Database Systems, Full-Stack Web Development.}{} % List courses
-\resumeSubHeadingListEnd
-
-%----------------------------------------------------------------------------------------
-% TECHNICAL SKILLS
-%----------------------------------------------------------------------------------------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}] % Removed leading spaces
-    \small{\item{ % Group skills into categories
-        \textbf{Programming Languages}{: Python, TypeScript, JavaScript, SQL, HTML, CSS} \\
-        \textbf{Frontend Frameworks/Libraries}{: React, Next.js, React Query, Framer Motion} \\
-        \textbf{Backend Frameworks}{: Django, FastAPI, Node.js} \\
-        \textbf{Databases}{: PostgreSQL, MySQL, Redis} \\
-        \textbf{Cloud \& DevOps}{: REST APIs, JSON, HTTP, AWS, Supabase (PaaS), Docker, Git, Cloudinary (CDN), CI/CD Automation} \\
-        \textbf{Concepts}{: OOP, End-to-End Product Development, Retrieval Augmented Generation (RAG), Embeddings, NLP, Large Langue Models (Gemini, LLaMA, Flux.1 AI), Clustering (HDBScan)}
-    }}
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE
-%----------------------------------------------------------------------------------------
-\section{Experience}
-\resumeSubHeadingListStart % Removed leading spaces
-    % Job 1
-    \resumeSubheading
-      {Full-stack Developer / Operations Manager}{Oct 2024 – Present}
-      {Kim Tin Jewelry}{Oakland, CA}
-      \resumeItemListStart
-        \resumeItem{Led the end-to-end technical transformation of a family-owned retail business, significantly improving operational efficiency and enabling strategic growth. Independently designed, developed, and deployed solutions based on stakeholder and client needs, managing the full software engineering lifecycle.}
-        \resumeItem{Built and deployed full-stack automation tools (Python, TypeScript, PostgreSQL) for critical operations (accounting, inventory, CRM), cutting manual workload by 70\% while enhancing communication across teams.}
-        \resumeItem{Owned the development and shipped custom applications to optimize inventory management and vendor interactions, directly impacting supply chain efficiency.}
-        \resumeItem{Launched data-driven digital marketing campaigns using social media and AI (Flux.1) to demonstrably grow the customer base.}
-      \resumeItemListEnd
-
-    % Job 2
-    \resumeSubheading
-      {Insurance Agent (Sales) - 2 years, 6 months}{Apr 2022 – Sep 2024}
-      {AAA – The Auto Club of Southern California}{Costa Mesa, CA}
-      \resumeItemListStart
-        \resumeItem{Top 3\% (peaked at \#1 of 255 in Jan-Feb 2024) insurance agent (Personal Lines \& Life) leveraged Computer Science expertise to manage the full sales cycle (lead gen, sales, service, retention) and self-underwrite tailored policies under supervision (avg 100 percent accuracy.)}
-        \resumeItem{Transitioning directly from Bachelor's program, collaborated with team members and leadership to provide actionable feedback during Salesforce CRM integration, improving workflow design.}
-        \resumeItem{Demonstrated strong problem-solving and initiative by identifying and resolving process inefficiencies, contributing directly to team performance (Team of the Year Regional) through effective communication and collaboration.}
-        \resumeItem{Utilized data analysis and systems thinking (rooted in CS background) to systematically optimize sales processes, analyzed performance data to pinpoint key growth drivers, leading to strategies resulting in Top 3\% national producer ranking (Diamond Club) and multiple performance awards, demonstrating exceptional people skills.}
-      \resumeItemListEnd
+      {OOP, Algorithms, Software Design and Implementation, Database Structures, Full-Stack Web Development, Operating Systems, NLP.}{} % List courses
 \resumeSubHeadingListEnd
 
 %----------------------------------------------------------------------------------------
@@ -193,29 +197,24 @@ Full-stack engineer with the equivalent of 2 years of software engineering exper
 \resumeSubHeadingListStart % Removed leading spaces
     % Project 1
     \resumeProjectHeading
-      {\textbf{NewsReader-Ultimate (Part 2 of Scraper-Ultimate)} $|$ \emph{Python, Google-GenAI, Haystack-RAG, PostgreSQL}}{Apr 2025 – Present}
+      {\textbf{News Scraper+Reader Ultimate} $|$ \emph{Python, Puppeteer, FastAPI, PostgreSQL, Docker, GeminiAPI, RAG, Haystack, NLP, ETL, LLM, REST}}{Mar 2025 – Present}
       \resumeItemListStart
-        \resumeItem{Developed a scalable Python pipeline automating news analysis from ingestion to reporting; features include LLM-based preprocessing (summarization, embedding, clustering) and integration with a custom RAG system.}
-        \resumeItem{Designed and executed an ETL process: extracted articles from Scraper-Ultimate API, transformed them using local llms and Gemini, and loaded structured results into a PostgreSQL database.}
-        \resumeItem{Designed a RAG architecture to retrieve historical articles, entities, and events, enhancing the context and insights of daily reports leveraging Haystack framework. Applied prompt engineering techniques with Google's Gemini 2.5 Pro and its large context window (1 million tokens or 10 small novels) within the RAG pipeline to generate comprehensive daily reports, encompassing recaps, interpretations, patterns, and opinions.}
+        \resumeItem{Architected a distributed ETL pipeline (24,500+ articles/day - scalable to 500k+) for multilingual news ingestion via headless Puppeteer, tokenized parsing, and schema-normalized persistence.} 
+        \resumeItem{Integrated RAG stack with Gemini, Haystack, and FAISS-ready vector embeddings for semantic clustering, context-righ summarization, and historical grounding.} 
+        \resumeItem{Designed token-budget-aware LLM throttling to optimize latency-bound throughput (1200 articles per 70 min) under API rate constraints.} 
+        \resumeItem{Provisioned containerized FastAPI endpoints with REST architecture-enabled programmatic access by internal tools and external clients.} 
+        \resumeItem{Future product integrates user profiles, behavioral analytics, and dynamic scrolling to deliver personalized newsfeeds based on historical reading patterns and AI clustering.} 
       \resumeItemListEnd
 
     % Project 2
     \resumeProjectHeading
-      {\textbf{Scraper-Ultimate} $|$ \emph{Python, FastAPI, PostgreSQL, Docker}}{Mar 2025 – Apr 2025}
+      {\textbf{House of Iris} $|$ \emph{Next.js, React.js, TypeScript, Supabase, PostgreSQL, TailwindCSS, Cloudinary CDN, EmailJS, FramerMotion}}{Dec 2024 – Present}
       \resumeItemListStart
-        \resumeItem{Developed a robust web scraping pipeline in Python, utilizing libraries such as Playwright and Scrapling to extract structured data from diverse news sources. Implemented advanced anti-detection techniques, including browser fingerprint randomization, HTTP request customization, and adaptive retry mechanisms, to overcome anti-bot protections. Designed the solution to simulate human interaction patterns, effectively bypassing complex security measures such as CAPTCHAs and dynamic overlays, ensuring high-quality data extraction.}
-      \resumeItemListEnd
-
-    % Project 3
-    \resumeProjectHeading
-      {\textbf{House of Iris} $|$ \emph{Next.js, React, Typescript, TailwindCSS, Supabase Postgres}}{Dec 2024 – Present}
-      \resumeItemListStart
-        \resumeItem{Built and deployed a full-stack application using Next.js/React/TypeScript, demonstrating proficiency in component architecture, state management, and API integration.}
-        \resumeItem{Implemented optimized image delivery by integrating the Cloudinary API for transformations and efficient loading.}
-        \resumeItem{Created a CRUD operations using Supabase Postgres, enabling persistent storage and retrieval of user-generated content.}
-        \resumeItem{Implemented a functional calendar component with scheduling capabilities, managing React state effectively and utilizing EmailJS to send automated confirmation and reminder emails.}
-        \resumeItem{Designed a reward mechanic with Framer Motion, incorporating a Gacha system to gamify the user experience and provide incentives.}
+        \resumeItem{Developed a mobile-first SPA with dynamic routing, gacha-style interactivity, letter board posts, and a scheduler with email confirmations-designed for casual users seeking an immersive UX.} 
+        \resumeItem{Used asset pipeline with Cloudinary + lazy-loading to deliver high-res media on mobile without frame drops-enhanced visual fidelity while controlling bandwidth.}
+        \resumeItem{Implemented full-stack CRUD via Supabase Postgres (Row-Level Security, JWT auth) and TanStack Query caching-ensured responsive UI state and secure client access.}
+        \resumeItem{Integrated user feedback via form tracking and behavioral metrics to improve feature placement, animation timing, and onboarding clarity.}
+        \resumeItem{Contributed to a shared design system with scalable components and adhered to WCAG-compliant styling-boosting accessibility across screen sizes and assistive tech.} 
       \resumeItemListEnd
 \resumeSubHeadingListEnd
 
