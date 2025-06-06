@@ -36,17 +36,31 @@
           >github.com/luongkhdang</a
         >
       </div>
-      <a
-        href="LuongDang_Resume.pdf"
-        download="LuongDang_Resume.pdf"
-        class="button"
-        >Download PDF Resume</a
-      >
+      <div class="pdf-preview-container">
+        <iframe
+          src="LuongDang_Resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          class="pdf-preview-iframe"
+          title="Resume Preview"
+        ></iframe>
+        <a
+          href="LuongDang_Resume.pdf"
+          download="LuongDang_Resume.pdf"
+          class="button"
+          >Download PDF Resume</a
+        >
+      </div>
     </header>
 
     <main>
       <div class="resume-container">
         <div class="left-column">
+          <div class="profile-picture-container">
+            <img
+              src="profile-picture.jpg"
+              alt="Luong Dang"
+              class="profile-picture"
+            />
+          </div>
           <section id="about">
             <h2>About</h2>
             <p style="text-align: justify">
@@ -270,7 +284,7 @@
                 <span class="project-tech"
                   ><em
                     >Next.js, React.js, TypeScript, Supabase, PostgreSQL,
-                    TailwindCSS, Cloudinary CDN, EmailJS, FramerMotion</em
+                    Cloudinary CDN, EmailJS, FramerMotion</em
                   ></span
                 >
                 <span>Dec 2024 – Present</span>
