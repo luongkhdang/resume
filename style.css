@@ -184,7 +184,7 @@ section h2 {
   margin: 0;
   font-weight: 600; /* Make company/degree stand out */
   text-align: center;
-  padding: 1rem;
+  padding: 0.2rem;
   font-size: 0.9rem;
   margin-top: 0.2rem; /* Space above footer */
 }
