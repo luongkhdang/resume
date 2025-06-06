@@ -186,7 +186,7 @@ section h2 {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
-  margin-top: 2rem; /* Space above footer */
+  margin-top: 0.2rem; /* Space above footer */
 }
 
 .course-work h3 {
@@ -203,7 +203,6 @@ section h2 {
   margin-right: 0.5em; /* Space between title and tech */
 }
 .project-tech {
-  flex-shrink: 1; /* Allow tech stack to shrink if needed */
   text-align: right;
 }
 
