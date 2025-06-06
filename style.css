@@ -102,6 +102,15 @@ header .contact-info a:hover {
   transform: translateY(-1px); /* Slight lift effect */
 }
 
+/* --- PDF Button with Preview --- */
+.btn-pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* 5 pixels between text and iframe */
+  padding: 10px 20px;
+}
+
 /* --- Main Content Area --- */
 main {
   flex: 1;
@@ -221,7 +230,7 @@ footer {
 
 .profile-picture {
   width: 260px;
-  height: 300px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover; /* Ensures the image covers the area without distortion */
   border: 4px solid #fff; /* Optional: adds a nice border */
